@@ -1,6 +1,28 @@
 package com.ryomen.bikee
 
-import android.app.AlertDialog import android.bluetooth.* import android.content.* import android.content.pm.PackageManager import android.os.* import android.speech.RecognizerIntent import android.util.Log import android.view.MenuItem import android.view.View import android.widget.* import androidx.appcompat.app.AppCompatActivity import androidx.appcompat.app.AppCompatDelegate import androidx.core.os.LocaleListCompat import androidx.drawerlayout.widget.DrawerLayout import androidx.appcompat.app.ActionBarDrawerToggle import com.google.android.material.navigation.NavigationView import org.json.JSONArray import androidx.core.content.pm.ShortcutManagerCompat import androidx.core.content.pm.ShortcutInfoCompat import androidx.core.graphics.drawable.IconCompat import java.io.OutputStream import java.util.* import androidx.appcompat.widget.Toolbar
+import android.app.AlertDialog 
+import android.bluetooth.* 
+import android.content.* 
+import android.content.pm.PackageManager 
+import android.os.* 
+import android.speech.RecognizerIntent 
+import android.util.Log 
+import android.view.MenuItem 
+import android.view.View 
+import android.widget.* 
+import androidx.appcompat.app.AppCompatActivity 
+import androidx.appcompat.app.AppCompatDelegate 
+import androidx.core.os.LocaleListCompat 
+import androidx.drawerlayout.widget.DrawerLayout 
+import androidx.appcompat.app.ActionBarDrawerToggle 
+import com.google.android.material.navigation.NavigationView 
+import org.json.JSONArray 
+import androidx.core.content.pm.ShortcutManagerCompat 
+import androidx.core.content.pm.ShortcutInfoCompat 
+import androidx.core.graphics.drawable.IconCompat 
+import java.io.OutputStream 
+import java.util.* 
+import androidx.appcompat.widget.Toolbar
 
 class MainActivity : AppCompatActivity() {
 
