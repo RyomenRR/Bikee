@@ -2,8 +2,8 @@
     <shortcut
         android:shortcutId="start_bike"
         android:enabled="true"
-        android:shortcutShortLabel="Start Bike"
-        android:shortcutLongLabel="Start your bike with Google Assistant"
+        android:shortcutShortLabel="@string/shortcut_short_label"
+android:shortcutLongLabel="@string/shortcut_long_label"
         android:icon="@drawable/ic_bike">
         
         <intent
