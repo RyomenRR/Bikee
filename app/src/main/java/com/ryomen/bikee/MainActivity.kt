@@ -39,6 +39,17 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        
+        val startBikeShortcut = ShortcutInfoCompat.Builder(this, "start_bike")
+    .setShortLabel("Start Bike")
+    .setLongLabel("Start your bike with Google Assistant")
+    .setIcon(IconCompat.createWithResource(this, R.drawable.ic_bike))
+    .setIntent(Intent(this, MainActivity::class.java).apply {
+        action = Intent.ACTION_VIEW
+        putExtra("voice_command", "start bike")
+    }).build()
+
+ShortcutManagerCompat.pushDynamicShortcut(this, startBikeShortcut)
 
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
@@ -221,17 +232,20 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun handleVoiceIntent() {
-        val assistantCmd = intent.getStringExtra("voice_command")
-        val voiceInput = intent.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS)
-        val input = assistantCmd ?: voiceInput?.firstOrNull()
-        input?.let { command ->
-            if (outputStream == null) {
-                Toast.makeText(this, "Connect to ESP32 first 💔", Toast.LENGTH_LONG).show()
-                return
-            }
-            handleVoiceCommand(command)
+    val assistantCmd = intent.getStringExtra("voice_command")
+    val data = intent.data?.toString()
+    val voiceInput = intent.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS)
+
+    val input = assistantCmd ?: voiceInput?.firstOrNull() ?: data
+
+    input?.let { command ->
+        if (outputStream == null) {
+            Toast.makeText(this, "Connect to ESP32 first 💔", Toast.LENGTH_LONG).show()
+            return
         }
+        handleVoiceCommand(command)
     }
+}
 
     private fun handleVoiceCommand(command: String) {
         val lowerCmd = command.lowercase(Locale.getDefault())
