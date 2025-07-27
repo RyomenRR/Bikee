@@ -39,18 +39,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        
-        val startBikeShortcut = ShortcutInfoCompat.Builder(this, "start_bike")
-    .setShortLabel("Start Bike")
-    .setLongLabel("Start your bike with Google Assistant")
-    .setIcon(IconCompat.createWithResource(this, R.drawable.ic_bike))
-    .setIntent(Intent(this, MainActivity::class.java).apply {
-        action = Intent.ACTION_VIEW
-        putExtra("voice_command", "start bike")
-    }).build()
-
-ShortcutManagerCompat.pushDynamicShortcut(this, startBikeShortcut)
-
+    
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
 
