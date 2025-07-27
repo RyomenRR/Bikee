@@ -1,0 +1,22 @@
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:shortcutId="start_bike"
+        android:enabled="true"
+        android:shortcutShortLabel="Start Bike"
+        android:shortcutLongLabel="Start your bike with Google Assistant"
+        android:icon="@drawable/ic_bike">
+        
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.ryomen.bikee"
+            android:targetClass="com.ryomen.bikee.MainActivity"
+            android:data="bikee://start" />
+
+        <capability android:name="actions.intent.START_BIKE">
+            <parameter
+                android:name="bike.name"
+                android:value="my bike"/>
+        </capability>
+
+    </shortcut>
+</shortcuts>
