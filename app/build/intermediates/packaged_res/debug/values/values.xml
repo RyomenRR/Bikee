@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorOnPrimary">#FFFFFF</color>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryVariant">#3700B3</color>
+    <color name="gray_hint">#CCCCCC</color>
+    <color name="nav_item_icon">#3F51B5</color>
+    <color name="nav_item_text">#000000</color>
+    <color name="purple_500">#9C27B0</color>
+    <color name="white">#FFFFFF</color>
+    <string name="app_name">Bikee</string>
+    <string name="bikee_control_panel">Bikee Control Panel</string>
+    <string name="change_language">Change Language</string>
+    <string name="command_sent">Command Sent</string>
+    <string name="connect">Connect</string>
+    <string name="connect_device">Connect Bluetooth</string>
+    <string name="connected">Connected</string>
+    <string name="connection_failed">Connection Failed</string>
+    <string name="custom_fx">Custom FX Mode</string>
+    <string name="english">English</string>
+    <string name="gujarati">Gujarati</string>
+    <string name="hindi">Hindi</string>
+    <string name="ignition">Ignition</string>
+    <string name="ignition_off">Ignition OFF</string>
+    <string name="ignition_on">Ignition ON</string>
+    <string name="indicator_mode">Indicator Mode</string>
+    <string name="no_paired">No paired devices found</string>
+    <string name="not_connected">Not connected</string>
+    <string name="select_device">Select your ESP32</string>
+    <string name="select_language">Select Language</string>
+    <string name="start_engine">Start Engine</string>
+    <style name="DialogTheme" parent="Theme.AppCompat.Dialog.Alert">
+    <item name="android:background">#222222</item> 
+    <item name="android:textColorPrimary">#FFFFFF</item> 
+    <item name="android:windowMinWidthMajor">90%</item>
+    <item name="android:windowMinWidthMinor">90%</item>
+</style>
+    <style name="Theme.Bikee" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:statusBarColor">#000000</item>
+        <item name="android:navigationBarColor">#000000</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+</resources>

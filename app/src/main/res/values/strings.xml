@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Bikee</string>
+    <string name="bikee_control_panel">Bikee Control Panel</string>
+    <string name="connect_device">Connect Bluetooth</string>
+    <string name="connect">Connect</string>
+    <string name="connected">Connected</string>
+    <string name="connection_failed">Connection Failed</string>
+    <string name="not_connected">Not connected</string>
+    <string name="start_engine">Start Engine</string>
+    <string name="ignition">Ignition</string>
+    <string name="ignition_on">Ignition ON</string>
+    <string name="ignition_off">Ignition OFF</string>
+    <string name="indicator_mode">Indicator Mode</string>
+    <string name="custom_fx">Custom FX Mode</string>
+    <string name="command_sent">Command Sent</string>
+    <string name="no_paired">No paired devices found</string>
+    <string name="select_device">Select your ESP32</string>
+    <string name="select_language">Select Language</string>
+    <string name="english">English</string>
+    <string name="hindi">Hindi</string>
+    <string name="gujarati">Gujarati</string>
+    <string name="change_language">Change Language</string>
+</resources>

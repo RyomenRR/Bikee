@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_language"
+        android:title="Change Language"
+        android:icon="@android:drawable/ic_menu_manage" />
+    <item
+        android:id="@+id/nav_voice_commands"
+        android:title="Voice Commands"
+        android:icon="@android:drawable/ic_btn_speak_now" />
+</menu>

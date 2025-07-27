@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">બાઇકી</string>
+    <string name="connect">જોડાવો</string>
+    <string name="ignition">ઇગ્નિશન</string>
+    <string name="start_engine">ઇંજિન ચાલુ કરો</string>
+    <string name="indicator_mode">ઇન્ડિકેટર મોડ</string>
+    <string name="custom_fx">કસ્ટમ એફએક્સ</string>
+    <string name="connected">%1$s સાથે જોડાયેલ</string>
+    <string name="connection_failed">કનેકશન નિષ્ફળ ગયું</string>
+    <string name="command_sent">%1$s મોકલાયું</string>
+    <string name="not_connected">જોડાયેલ નથી</string>
+    <string name="no_paired">કોઈ જોડાયેલ ઉપકરણ મળ્યું નહીં</string>
+    <string name="select_device">તમારું ESP32 પસંદ કરો</string>
+    <string name="bikee_control_panel">બાઇકી નિયંત્રણ પેનલ</string>
+    <string name="connect_device">બ્લૂટૂથ જોડાવો</string>
+    <string name="select_language">ભાષા પસંદ કરો</string>
+    <string name="english">અંગ્રેજી</string>
+    <string name="hindi">હિન્દી</string>
+    <string name="gujarati">ગુજરાતી</string>
+    <string name="change_language">ભાષા બદલો</string>
+</resources>

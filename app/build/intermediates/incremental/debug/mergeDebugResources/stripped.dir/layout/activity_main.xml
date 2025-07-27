@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Main content -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Toolbar (for hamburger icon) -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:titleTextColor="@android:color/white"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+        <!-- Your main UI -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <Button
+                    android:id="@+id/toggleIgnition"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="IGNITION OFF"
+                    android:backgroundTint="@android:color/holo_red_dark" />
+                <Button
+                    android:id="@+id/btnStart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/start_engine" />
+
+                <LinearLayout
+    android:id="@+id/fxContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <Button
+        android:id="@+id/btnFx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="FX"
+        android:backgroundTint="@color/purple_500"
+        android:textColor="@android:color/white" />
+
+    <!-- Hidden by default -->
+    <LinearLayout
+        android:id="@+id/fxOptions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:paddingTop="8dp">
+
+        <Button
+            android:id="@+id/btnFx1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="FX Profile 1" />
+
+        <Button
+            android:id="@+id/btnFx2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="FX Profile 2" />
+
+        <Button
+            android:id="@+id/btnFx3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="FX Profile 3" />
+
+        <Button
+            android:id="@+id/btnFxOff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Turn Off FX" />
+    </LinearLayout>
+</LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <!-- Navigation drawer -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        android:background="@android:color/black"
+        app:menu="@menu/drawer_menu" />
+</androidx.drawerlayout.widget.DrawerLayout>

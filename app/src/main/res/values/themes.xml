@@ -1,0 +1,13 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.Bikee" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:statusBarColor">#000000</item>
+        <item name="android:navigationBarColor">#000000</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+    <style name="DialogTheme" parent="Theme.AppCompat.Dialog.Alert">
+    <item name="android:background">#222222</item> <!-- Dark background -->
+    <item name="android:textColorPrimary">#FFFFFF</item> <!-- White text -->
+    <item name="android:windowMinWidthMajor">90%</item>
+    <item name="android:windowMinWidthMinor">90%</item>
+</style>
+</resources>
