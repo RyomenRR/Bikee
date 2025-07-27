@@ -3,9 +3,9 @@
         android:shortcutId="start_bike"
         android:enabled="true"
         android:shortcutShortLabel="@string/shortcut_short_label"
-android:shortcutLongLabel="@string/shortcut_long_label"
+        android:shortcutLongLabel="@string/shortcut_long_label"
         android:icon="@drawable/ic_bike">
-        
+
         <intent
             android:action="android.intent.action.VIEW"
             android:targetPackage="com.ryomen.bikee"
@@ -15,8 +15,7 @@ android:shortcutLongLabel="@string/shortcut_long_label"
         <capability android:name="actions.intent.START_BIKE">
             <parameter
                 android:name="bike.name"
-                android:value="my bike"/>
+                android:value="my bike" />
         </capability>
-
     </shortcut>
 </shortcuts>
