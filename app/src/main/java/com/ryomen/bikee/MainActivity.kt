@@ -22,6 +22,8 @@ import androidx.core.content.pm.ShortcutInfoCompat
 import androidx.core.graphics.drawable.IconCompat
 import java.io.OutputStream
 import java.util.*
+import android.app.PendingIntent
+import android.net.Uri
 import androidx.appcompat.widget.Toolbar
 
 class MainActivity : AppCompatActivity() {
