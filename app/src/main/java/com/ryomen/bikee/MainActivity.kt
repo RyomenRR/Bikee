@@ -42,8 +42,29 @@ class MainActivity : AppCompatActivity() {
     
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
-
+        
         val toggleIgnition = findViewById<Button>(R.id.toggleIgnition)
+        if (ShortcutManagerCompat.isRequestPinShortcutSupported(this)) {
+    val shortcut = ShortcutInfoCompat.Builder(this, "start_bike")
+        .setShortLabel("Start Bike")
+        .setLongLabel("Start your bike")
+        .setIcon(IconCompat.createWithResource(this, R.drawable.ic_bike))
+        .setIntent(Intent(Intent.ACTION_VIEW).apply {
+            data = Uri.parse("bikee://start_bike")
+            setPackage(packageName)
+            setClass(this@MainActivity, MainActivity::class.java)
+        })
+        .build()
+
+    val pinnedShortcutCallbackIntent = ShortcutManagerCompat.createShortcutResultIntent(this, shortcut)
+    val successCallback = PendingIntent.getBroadcast(
+        this, 0, pinnedShortcutCallbackIntent, PendingIntent.FLAG_IMMUTABLE
+    )
+
+    ShortcutManagerCompat.requestPinShortcut(this, shortcut, successCallback.intentSender)
+} else {
+    Toast.makeText(this, "Pinned shortcuts not supported", Toast.LENGTH_SHORT).show()
+        }
         val btnStart = findViewById<Button>(R.id.btnStart)
         val btnFx = findViewById<Button>(R.id.btnFx)
         intent?.data?.let { uri ->
