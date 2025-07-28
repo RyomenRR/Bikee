@@ -165,7 +165,24 @@ class MainActivity : AppCompatActivity() {
             Log.d("Bikee", "No previous MAC saved")
         }
     }
+    private fun createStartBikeShortcut() {
+    val shortcutIntent = Intent(this, MainActivity::class.java).apply {
+        action = Intent.ACTION_VIEW
+        putExtra("voice_command", "start bike")
+    }
 
+    val addIntent = Intent().apply {
+        putExtra(Intent.EXTRA_SHORTCUT_INTENT, shortcutIntent)
+        putExtra(Intent.EXTRA_SHORTCUT_NAME, "Start Bike")
+        putExtra(Intent.EXTRA_SHORTCUT_ICON_RESOURCE,
+            Intent.ShortcutIconResource.fromContext(this@MainActivity, R.drawable.ic_bike)) // use your icon here
+        action = "com.android.launcher.action.INSTALL_SHORTCUT"
+    }
+
+    sendBroadcast(addIntent)
+    Toast.makeText(this, "Home shortcut added! 🛵", Toast.LENGTH_SHORT).show()
+    }
+    
     private fun attemptAutoReconnect() {
         val prefs = getSharedPreferences("bikee_prefs", Context.MODE_PRIVATE)
         val lastMac = prefs.getString("last_mac", null)
