@@ -8,14 +8,8 @@
 
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetPackage="com.ryomen.bikee"
             android:targetClass="com.ryomen.bikee.MainActivity"
-            android:data="bikee://start" />
-
-        <capability android:name="actions.intent.START_BIKE">
-            <parameter
-                android:name="bike.name"
-                android:value="my bike" />
-        </capability>
+            android:targetPackage="com.ryomen.bikee"
+            android:data="bikee://start_bike" />
     </shortcut>
 </shortcuts>
