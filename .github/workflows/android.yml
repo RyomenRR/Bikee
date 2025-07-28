@@ -2,10 +2,8 @@ name: Build APK
 
 on:
   push:
-    branches:
-      - main  # or 'master' or any branch you use
-  pull_request:
-
+    workflow_dispatch:
+    
 jobs:
   build:
     name: Build APK with Gradle
