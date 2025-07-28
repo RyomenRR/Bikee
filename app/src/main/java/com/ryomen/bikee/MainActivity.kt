@@ -135,6 +135,10 @@ class MainActivity : AppCompatActivity() {
 
         handleVoiceIntent()
         Log.d("BikeeLog", "✅ handleVoiceIntent was triggered")
+
+        findViewById<Button>(R.id.addShortcutButton).setOnClickListener {
+    createStartBikeShortcut()
+        }
     }
 
     private fun autoReconnect() {
