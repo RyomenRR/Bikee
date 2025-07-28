@@ -46,7 +46,11 @@ class MainActivity : AppCompatActivity() {
         val toggleIgnition = findViewById<Button>(R.id.toggleIgnition)
         val btnStart = findViewById<Button>(R.id.btnStart)
         val btnFx = findViewById<Button>(R.id.btnFx)
-
+        intent?.data?.let { uri ->
+    if (uri.toString() == "bikee://start_bike") {
+        handleVoiceCommand("start bike")
+    }
+        }
         val fxOptions = findViewById<LinearLayout>(R.id.fxOptions)
         val btnFx1 = findViewById<Button>(R.id.btnFx1)
         val btnFx2 = findViewById<Button>(R.id.btnFx2)
