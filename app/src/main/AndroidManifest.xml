@@ -40,14 +40,17 @@
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-                <data android:scheme="bikee" android:host="start_bike" />
+                <data android:scheme="bikee" />
             </intent-filter>
         </activity>
+
+        <!-- 🎯 Receiver for pinned shortcut broadcast -->
         <receiver android:name=".StartBikeReceiver" android:exported="true">
-    <intent-filter>
-        <action android:name="com.ryomen.bikee.START_BIKE" />
-    </intent-filter>
-</receiver>
+            <intent-filter>
+                <action android:name="com.ryomen.bikee.START_BIKE" />
+            </intent-filter>
+        </receiver>
+    <service android:name=".BluetoothService" android:exported="false" />
         <!-- 🛠 Voice Command Editor -->
         <activity
             android:name=".CommandEditActivity"
@@ -63,6 +66,5 @@
         <meta-data
             android:name="android.app.shortcuts"
             android:resource="@xml/shortcuts" />
-
     </application>
 </manifest>
