@@ -20,6 +20,7 @@ drawable btn_gradient_red
 drawable ic_bike
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+id addShortcutButton
 id btnFx
 id btnFx1
 id btnFx2
@@ -68,10 +69,15 @@ string no_paired
 string not_connected
 string select_device
 string select_language
+string shortcut_long_label
+string shortcut_short_label
 string start_engine
 style AppTheme
 style Base.AppTheme
 style DialogTheme
 style Theme.Bikee
+style Theme.Bikee.ShortcutNoUI
+xml actions
 xml backup_rules
 xml data_extraction_rules
+xml shortcuts

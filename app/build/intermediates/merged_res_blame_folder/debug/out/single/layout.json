@@ -1,22 +1,18 @@
 [
     {
-        "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.1.1/com.ryomen.bikee.app-mergeDebugResources-28:/layout/activity_settings.xml",
-        "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.1.1/com.ryomen.bikee.app-main-31:/layout/activity_settings.xml"
-    },
-    {
-        "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.1.1/com.ryomen.bikee.app-mergeDebugResources-28:/layout/activity_command_edit.xml",
-        "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.1.1/com.ryomen.bikee.app-main-31:/layout/activity_command_edit.xml"
-    },
-    {
-        "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.1.1/com.ryomen.bikee.app-mergeDebugResources-28:/layout/content_main.xml",
-        "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.1.1/com.ryomen.bikee.app-main-31:/layout/content_main.xml"
-    },
-    {
         "merged": "com.ryomen.bikee.app-mergeDebugResources-28:/layout/activity_main.xml",
         "source": "com.ryomen.bikee.app-main-31:/layout/activity_main.xml"
     },
     {
-        "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.1.1/com.ryomen.bikee.app-mergeDebugResources-28:/layout/activity_main.xml",
-        "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.1.1/com.ryomen.bikee.app-main-31:/layout/activity_main.xml"
+        "merged": "com.ryomen.bikee.app-mergeDebugResources-28:/layout/content_main.xml",
+        "source": "com.ryomen.bikee.app-main-31:/layout/content_main.xml"
+    },
+    {
+        "merged": "com.ryomen.bikee.app-mergeDebugResources-28:/layout/activity_settings.xml",
+        "source": "com.ryomen.bikee.app-main-31:/layout/activity_settings.xml"
+    },
+    {
+        "merged": "com.ryomen.bikee.app-mergeDebugResources-28:/layout/activity_command_edit.xml",
+        "source": "com.ryomen.bikee.app-main-31:/layout/activity_command_edit.xml"
     }
 ]

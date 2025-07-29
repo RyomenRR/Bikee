@@ -8,12 +8,12 @@
         android:minSdkVersion="21"
         android:targetSdkVersion="33" />
 
-    <!-- Basic Bluetooth permissions -->
+    <!-- 📡 Bluetooth & Location permissions -->
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
-    <!-- Android 12+ Bluetooth permissions -->
+    <!-- 📱 Android 12+ Bluetooth permissions -->
     <uses-permission
         android:name="android.permission.BLUETOOTH_CONNECT"
         android:required="false" />
@@ -21,7 +21,7 @@
         android:name="android.permission.BLUETOOTH_SCAN"
         android:required="false" />
 
-    <!-- Voice recognition and audio input -->
+    <!-- 🎤 Voice & Internet -->
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -48,31 +48,54 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Bikee" >
 
-        <!-- Main launcher activity -->
+        <!-- 🏍️ Main Activity (Handles launcher, shortcut & assistant trigger) -->
         <activity
             android:name="com.ryomen.bikee.MainActivity"
-            android:exported="true" >
+            android:exported="true"
+            android:launchMode="singleTop" >
 
-            <!-- Launcher -->
+            <!-- 📱 Launcher icon -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
-            <!-- For voice shortcut trigger via Assistant -->
+            <!-- 🔗 Shortcut or Assistant trigger (bikee://start_bike) -->
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="start_bike"
+                    android:scheme="bikee" />
             </intent-filter>
         </activity>
 
-        <!-- Voice command editing activity -->
+        <receiver
+            android:name="com.ryomen.bikee.StartBikeReceiver"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.ryomen.bikee.START_BIKE" />
+            </intent-filter>
+        </receiver>
+        <!-- 🛠 Voice Command Editor -->
         <activity
             android:name="com.ryomen.bikee.CommandEditActivity"
             android:exported="true" />
+
+        <!-- 🧠 Invisible Shortcut Handler -->
+        <activity
+            android:name="com.ryomen.bikee.StartBikeActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Bikee.ShortcutNoUI" />
+
+        <!-- 🚀 Shortcut XML config (for Android launcher) -->
+        <meta-data
+            android:name="android.app.shortcuts"
+            android:resource="@xml/shortcuts" />
 
         <provider
             android:name="com.itsaky.androidide.logsender.utils.LogSenderInstaller"
