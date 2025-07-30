@@ -8,12 +8,12 @@
         android:minSdkVersion="21"
         android:targetSdkVersion="33" />
 
-    <!-- 📡 Bluetooth & Location permissions -->
+    <!-- Basic Bluetooth permissions -->
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
-    <!-- 📱 Android 12+ Bluetooth permissions -->
+    <!-- Android 12+ Bluetooth permissions -->
     <uses-permission
         android:name="android.permission.BLUETOOTH_CONNECT"
         android:required="false" />
@@ -21,7 +21,7 @@
         android:name="android.permission.BLUETOOTH_SCAN"
         android:required="false" />
 
-    <!-- 🎤 Voice & Internet -->
+    <!-- Voice recognition and audio input -->
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -48,43 +48,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Bikee" >
 
-        <!-- 🏍️ Main Activity -->
+        <!-- Main launcher activity -->
         <activity
             android:name="com.ryomen.bikee.MainActivity"
-            android:exported="true"
-            android:launchMode="singleTop" >
-
-            <!-- 📱 Launcher icon -->
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-            <!-- 🔗 Assistant trigger (e.g. bikee://start_bike) -->
         </activity>
 
-        <!-- 🎯 Broadcast-only receiver -->
-        <receiver
-            android:name="com.ryomen.bikee.StartBikeReceiver"
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="com.ryomen.bikee.START_BIKE" />
-            </intent-filter>
-        </receiver>
-
-        <!-- 🔌 Bluetooth logic -->
-        <service
-            android:name="com.ryomen.bikee.BluetoothService"
-            android:exported="false" />
-
-        <!-- 🧠 Command editor -->
+        <!-- Voice command editing activity -->
         <activity
             android:name="com.ryomen.bikee.CommandEditActivity"
             android:exported="true" />
-
-        <!-- ⛔ Removed shortcut meta-data to prevent launching Activity -->
-        <!-- 🚫 <meta-data android:name="android.app.shortcuts" android:resource="@xml/shortcuts" /> -->
 
         <provider
             android:name="com.itsaky.androidide.logsender.utils.LogSenderInstaller"

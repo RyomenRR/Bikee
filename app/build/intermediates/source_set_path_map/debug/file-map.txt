@@ -23,9 +23,9 @@ com.ryomen.bikee.app-emoji2-views-helper-1.2.0-21 /data/data/com.itsaky.androidi
 com.ryomen.bikee.app-constraintlayout-2.1.4-22 /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dca3f209149da945fc6fb16ed46dc543/transformed/constraintlayout-2.1.4/res
 com.ryomen.bikee.app-appcompat-1.6.1-23 /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/e95b39d86bf96ffa767e30ec4beac176/transformed/appcompat-1.6.1/res
 com.ryomen.bikee.app-core-1.9.0-24 /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/ed088136bf1338c42e8748865e9a426d/transformed/core-1.9.0/res
-com.ryomen.bikee.app-resValues-25 /storage/emulated/0/AndroidIDEProjects/Bikee/app/build/generated/res/resValues/debug
-com.ryomen.bikee.app-packageDebugResources-26 /storage/emulated/0/AndroidIDEProjects/Bikee/app/build/intermediates/incremental/debug/packageDebugResources/merged.dir
-com.ryomen.bikee.app-packageDebugResources-27 /storage/emulated/0/AndroidIDEProjects/Bikee/app/build/intermediates/incremental/debug/packageDebugResources/stripped.dir
-com.ryomen.bikee.app-merged_res-28 /storage/emulated/0/AndroidIDEProjects/Bikee/app/build/intermediates/merged_res/debug
-com.ryomen.bikee.app-debug-29 /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/debug/res
-com.ryomen.bikee.app-main-30 /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/res
+com.ryomen.bikee.app-resValues-25 /storage/emulated/0/Pro/Bikee/app/build/generated/res/resValues/debug
+com.ryomen.bikee.app-packageDebugResources-26 /storage/emulated/0/Pro/Bikee/app/build/intermediates/incremental/debug/packageDebugResources/merged.dir
+com.ryomen.bikee.app-packageDebugResources-27 /storage/emulated/0/Pro/Bikee/app/build/intermediates/incremental/debug/packageDebugResources/stripped.dir
+com.ryomen.bikee.app-merged_res-28 /storage/emulated/0/Pro/Bikee/app/build/intermediates/merged_res/debug
+com.ryomen.bikee.app-debug-29 /storage/emulated/0/Pro/Bikee/app/src/debug/res
+com.ryomen.bikee.app-main-30 /storage/emulated/0/Pro/Bikee/app/src/main/res

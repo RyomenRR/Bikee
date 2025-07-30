@@ -3091,7 +3091,6 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
-id addShortcutButton
 id alertTitle
 id aligned
 id all
@@ -3909,10 +3908,6 @@ string searchview_clear_text_content_description
 string searchview_navigation_content_description
 string select_device
 string select_language
-string shortcut_long_label
-string shortcut_short_label
-string shortcut_start_bike_long
-string shortcut_start_bike_short
 string side_sheet_accessibility_pane_title
 string side_sheet_behavior
 string start_engine
@@ -4457,7 +4452,6 @@ style Theme_AppCompat_Light_DialogWhenLarge
 style Theme_AppCompat_Light_NoActionBar
 style Theme_AppCompat_NoActionBar
 style Theme_Bikee
-style Theme_Bikee_ShortcutNoUI
 style Theme_Design
 style Theme_Design_BottomSheetDialog
 style Theme_Design_Light
@@ -5176,7 +5170,5 @@ styleable ViewPager2 android_orientation
 styleable ViewStubCompat android_id android_layout android_inflatedId
 styleable ViewTransition android_id SharedValue SharedValueId clearsTag duration ifTagNotSet ifTagSet motionInterpolator motionTarget onStateTransition pathMotionArc setsTag transitionDisable upDuration viewTransitionMode
 styleable include constraintSet
-xml actions
 xml backup_rules
 xml data_extraction_rules
-xml shortcuts

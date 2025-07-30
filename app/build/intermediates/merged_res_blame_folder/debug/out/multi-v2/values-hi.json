@@ -4,7 +4,7 @@
             "outputFile": "com.ryomen.bikee.app-mergeDebugResources-27:/values-hi/values-hi.xml",
             "map": [
                 {
-                    "source": "/storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/res/values-hi/strings.xml",
+                    "source": "/storage/emulated/0/Pro/Bikeevoice/app/src/main/res/values-hi/strings.xml",
                     "from": {
                         "startLines": "1,13,19,9,2,14,7,8,6,16,18,17,3,5,11,10,12,15,4",
                         "startColumns": "4,4,0,4,4,0,4,4,4,0,0,0,4,4,4,4,4,0,4",
