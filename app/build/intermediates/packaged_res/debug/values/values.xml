@@ -28,7 +28,7 @@
     <string name="not_connected">Not connected</string>
     <string name="select_device">Select your ESP32</string>
     <string name="select_language">Select Language</string>
-    <string name="shortcut_long_label">Start your bike with Google Assistant</string>
+    <string name="shortcut_long_label">Start your bike silently</string>
     <string name="shortcut_short_label">Start Bike</string>
     <string name="start_engine">Start Engine</string>
     <style name="DialogTheme" parent="Theme.AppCompat.Dialog.Alert">

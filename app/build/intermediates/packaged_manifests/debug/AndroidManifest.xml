@@ -48,7 +48,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Bikee" >
 
-        <!-- 🏍️ Main Activity (Handles launcher, shortcut & assistant trigger) -->
+        <!-- 🏍️ Main Activity -->
         <activity
             android:name="com.ryomen.bikee.MainActivity"
             android:exported="true"
@@ -61,19 +61,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
-            <!-- 🔗 Shortcut or Assistant trigger (bikee://start_bike) -->
+            <!-- 🔗 Assistant trigger (e.g. bikee://start_bike) -->
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
-                <data
-                    android:host="start_bike"
-                    android:scheme="bikee" />
+                <data android:scheme="bikee" />
             </intent-filter>
         </activity>
 
+        <!-- 🎯 Broadcast-only receiver -->
         <receiver
             android:name="com.ryomen.bikee.StartBikeReceiver"
             android:exported="true" >
@@ -81,21 +80,19 @@
                 <action android:name="com.ryomen.bikee.START_BIKE" />
             </intent-filter>
         </receiver>
-        <!-- 🛠 Voice Command Editor -->
+
+        <!-- 🔌 Bluetooth logic -->
+        <service
+            android:name="com.ryomen.bikee.BluetoothService"
+            android:exported="false" />
+
+        <!-- 🧠 Command editor -->
         <activity
             android:name="com.ryomen.bikee.CommandEditActivity"
             android:exported="true" />
 
-        <!-- 🧠 Invisible Shortcut Handler -->
-        <activity
-            android:name="com.ryomen.bikee.StartBikeActivity"
-            android:exported="true"
-            android:theme="@style/Theme.Bikee.ShortcutNoUI" />
-
-        <!-- 🚀 Shortcut XML config (for Android launcher) -->
-        <meta-data
-            android:name="android.app.shortcuts"
-            android:resource="@xml/shortcuts" />
+        <!-- ⛔ Removed shortcut meta-data to prevent launching Activity -->
+        <!-- 🚫 <meta-data android:name="android.app.shortcuts" android:resource="@xml/shortcuts" /> -->
 
         <provider
             android:name="com.itsaky.androidide.logsender.utils.LogSenderInstaller"

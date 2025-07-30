@@ -80,4 +80,3 @@ style Theme.Bikee.ShortcutNoUI
 xml actions
 xml backup_rules
 xml data_extraction_rules
-xml shortcuts

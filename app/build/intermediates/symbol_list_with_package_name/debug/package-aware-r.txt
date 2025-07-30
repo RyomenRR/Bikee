@@ -5177,4 +5177,3 @@ styleable include constraintSet
 xml actions
 xml backup_rules
 xml data_extraction_rules
-xml shortcuts

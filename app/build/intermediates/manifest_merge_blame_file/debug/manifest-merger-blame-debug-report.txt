@@ -69,7 +69,7 @@
 39-->[androidx.core:core:1.9.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/ed088136bf1338c42e8748865e9a426d/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
 40
 41    <application
-41-->/storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:18:5-67:19
+41-->/storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:18:5-65:19
 42        android:allowBackup="true"
 42-->/storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:19:9-35
 43        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -86,7 +86,7 @@
 49        android:theme="@style/Theme.Bikee" >
 49-->/storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:24:9-43
 50
-51        <!-- 🏍️ Main Activity (Handles launcher, shortcut & assistant trigger) -->
+51        <!-- 🏍️ Main Activity -->
 52        <activity
 52-->/storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:27:9-45:20
 53            android:name="com.ryomen.bikee.MainActivity"
@@ -108,7 +108,7 @@
 61-->/storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:35:27-74
 62            </intent-filter>
 63
-64            <!-- 🔗 Shortcut or Assistant trigger (bikee://start_bike) -->
+64            <!-- 🔗 Assistant trigger (e.g. bikee://start_bike) -->
 65            <intent-filter>
 65-->/storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:39:13-44:29
 66                <action android:name="android.intent.action.VIEW" />
@@ -122,95 +122,87 @@
 69-->/storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:42:17-78
 69-->/storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:42:27-75
 70
-71                <data
-71-->/storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:43:17-74
-72                    android:host="start_bike"
-72-->/storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:43:46-71
-73                    android:scheme="bikee" />
-73-->/storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:43:23-45
-74            </intent-filter>
-75        </activity>
-76
-77        <receiver
-77-->/storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:46:9-50:12
-78            android:name="com.ryomen.bikee.StartBikeReceiver"
-78-->/storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:46:19-52
-79            android:exported="true" >
-79-->/storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:46:53-76
-80            <intent-filter>
-80-->/storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:47:5-49:21
-81                <action android:name="com.ryomen.bikee.START_BIKE" />
-81-->/storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:48:9-62
-81-->/storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:48:17-59
-82            </intent-filter>
-83        </receiver>
-84        <!-- 🛠 Voice Command Editor -->
-85        <activity
-85-->/storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:52:9-54:39
-86            android:name="com.ryomen.bikee.CommandEditActivity"
-86-->/storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:53:13-48
-87            android:exported="true" />
-87-->/storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:54:13-36
+71                <data android:scheme="bikee" />
+71-->/storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:43:17-48
+71-->/storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:43:23-45
+72            </intent-filter>
+73        </activity>
+74
+75        <!-- 🎯 Broadcast-only receiver -->
+76        <receiver
+76-->/storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:48:9-52:20
+77            android:name="com.ryomen.bikee.StartBikeReceiver"
+77-->/storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:48:19-52
+78            android:exported="true" >
+78-->/storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:48:53-76
+79            <intent-filter>
+79-->/storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:49:13-51:29
+80                <action android:name="com.ryomen.bikee.START_BIKE" />
+80-->/storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:50:17-70
+80-->/storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:50:25-67
+81            </intent-filter>
+82        </receiver>
+83
+84        <!-- 🔌 Bluetooth logic -->
+85        <service
+85-->/storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:55:9-78
+86            android:name="com.ryomen.bikee.BluetoothService"
+86-->/storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:55:18-50
+87            android:exported="false" />
+87-->/storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:55:51-75
 88
-89        <!-- 🧠 Invisible Shortcut Handler -->
+89        <!-- 🧠 Command editor -->
 90        <activity
-90-->/storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:57:9-60:63
-91            android:name="com.ryomen.bikee.StartBikeActivity"
-91-->/storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:58:13-46
-92            android:exported="true"
-92-->/storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:59:13-36
-93            android:theme="@style/Theme.Bikee.ShortcutNoUI" />
-93-->/storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:60:13-60
-94
-95        <!-- 🚀 Shortcut XML config (for Android launcher) -->
-96        <meta-data
-96-->/storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:63:9-65:49
-97            android:name="android.app.shortcuts"
-97-->/storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:64:13-49
-98            android:resource="@xml/shortcuts" />
-98-->/storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:65:13-46
-99
-100        <provider
-100-->[com.itsaky.androidide:logsender:2.7.1-beta-f5231daa5-SNAPSHOT] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/7bf0237d538928fa47256630a8bef1f1/transformed/logsender-2.7.1-beta-f5231daa5-SNAPSHOT-debug/AndroidManifest.xml:32:9-36:40
-101            android:name="com.itsaky.androidide.logsender.utils.LogSenderInstaller"
-101-->[com.itsaky.androidide:logsender:2.7.1-beta-f5231daa5-SNAPSHOT] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/7bf0237d538928fa47256630a8bef1f1/transformed/logsender-2.7.1-beta-f5231daa5-SNAPSHOT-debug/AndroidManifest.xml:33:13-84
-102            android:authorities="com.ryomen.bikee.logsender-installer"
-102-->[com.itsaky.androidide:logsender:2.7.1-beta-f5231daa5-SNAPSHOT] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/7bf0237d538928fa47256630a8bef1f1/transformed/logsender-2.7.1-beta-f5231daa5-SNAPSHOT-debug/AndroidManifest.xml:34:13-71
-103            android:enabled="@bool/logsender_enabled"
-103-->[com.itsaky.androidide:logsender:2.7.1-beta-f5231daa5-SNAPSHOT] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/7bf0237d538928fa47256630a8bef1f1/transformed/logsender-2.7.1-beta-f5231daa5-SNAPSHOT-debug/AndroidManifest.xml:35:13-54
-104            android:exported="false" />
-104-->[com.itsaky.androidide:logsender:2.7.1-beta-f5231daa5-SNAPSHOT] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/7bf0237d538928fa47256630a8bef1f1/transformed/logsender-2.7.1-beta-f5231daa5-SNAPSHOT-debug/AndroidManifest.xml:36:13-37
-105
-106        <service
-106-->[com.itsaky.androidide:logsender:2.7.1-beta-f5231daa5-SNAPSHOT] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/7bf0237d538928fa47256630a8bef1f1/transformed/logsender-2.7.1-beta-f5231daa5-SNAPSHOT-debug/AndroidManifest.xml:38:9-41:56
-107            android:name="com.itsaky.androidide.logsender.LogSenderService"
-107-->[com.itsaky.androidide:logsender:2.7.1-beta-f5231daa5-SNAPSHOT] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/7bf0237d538928fa47256630a8bef1f1/transformed/logsender-2.7.1-beta-f5231daa5-SNAPSHOT-debug/AndroidManifest.xml:39:13-76
-108            android:exported="false"
-108-->[com.itsaky.androidide:logsender:2.7.1-beta-f5231daa5-SNAPSHOT] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/7bf0237d538928fa47256630a8bef1f1/transformed/logsender-2.7.1-beta-f5231daa5-SNAPSHOT-debug/AndroidManifest.xml:40:13-37
-109            android:foregroundServiceType="dataSync" />
-109-->[com.itsaky.androidide:logsender:2.7.1-beta-f5231daa5-SNAPSHOT] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/7bf0237d538928fa47256630a8bef1f1/transformed/logsender-2.7.1-beta-f5231daa5-SNAPSHOT-debug/AndroidManifest.xml:41:13-53
-110
-111        <provider
-111-->[androidx.emoji2:emoji2:1.2.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a0aeda5a20292ec44a38b1146c336646/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
-112            android:name="androidx.startup.InitializationProvider"
-112-->[androidx.emoji2:emoji2:1.2.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a0aeda5a20292ec44a38b1146c336646/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
-113            android:authorities="com.ryomen.bikee.androidx-startup"
-113-->[androidx.emoji2:emoji2:1.2.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a0aeda5a20292ec44a38b1146c336646/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
-114            android:exported="false" >
-114-->[androidx.emoji2:emoji2:1.2.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a0aeda5a20292ec44a38b1146c336646/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
+90-->/storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:58:9-60:39
+91            android:name="com.ryomen.bikee.CommandEditActivity"
+91-->/storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:59:13-48
+92            android:exported="true" />
+92-->/storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:60:13-36
+93
+94        <!-- ⛔ Removed shortcut meta-data to prevent launching Activity -->
+95        <!-- 🚫 <meta-data android:name="android.app.shortcuts" android:resource="@xml/shortcuts" /> -->
+96
+97        <provider
+97-->[com.itsaky.androidide:logsender:2.7.1-beta-f5231daa5-SNAPSHOT] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/7bf0237d538928fa47256630a8bef1f1/transformed/logsender-2.7.1-beta-f5231daa5-SNAPSHOT-debug/AndroidManifest.xml:32:9-36:40
+98            android:name="com.itsaky.androidide.logsender.utils.LogSenderInstaller"
+98-->[com.itsaky.androidide:logsender:2.7.1-beta-f5231daa5-SNAPSHOT] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/7bf0237d538928fa47256630a8bef1f1/transformed/logsender-2.7.1-beta-f5231daa5-SNAPSHOT-debug/AndroidManifest.xml:33:13-84
+99            android:authorities="com.ryomen.bikee.logsender-installer"
+99-->[com.itsaky.androidide:logsender:2.7.1-beta-f5231daa5-SNAPSHOT] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/7bf0237d538928fa47256630a8bef1f1/transformed/logsender-2.7.1-beta-f5231daa5-SNAPSHOT-debug/AndroidManifest.xml:34:13-71
+100            android:enabled="@bool/logsender_enabled"
+100-->[com.itsaky.androidide:logsender:2.7.1-beta-f5231daa5-SNAPSHOT] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/7bf0237d538928fa47256630a8bef1f1/transformed/logsender-2.7.1-beta-f5231daa5-SNAPSHOT-debug/AndroidManifest.xml:35:13-54
+101            android:exported="false" />
+101-->[com.itsaky.androidide:logsender:2.7.1-beta-f5231daa5-SNAPSHOT] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/7bf0237d538928fa47256630a8bef1f1/transformed/logsender-2.7.1-beta-f5231daa5-SNAPSHOT-debug/AndroidManifest.xml:36:13-37
+102
+103        <service
+103-->[com.itsaky.androidide:logsender:2.7.1-beta-f5231daa5-SNAPSHOT] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/7bf0237d538928fa47256630a8bef1f1/transformed/logsender-2.7.1-beta-f5231daa5-SNAPSHOT-debug/AndroidManifest.xml:38:9-41:56
+104            android:name="com.itsaky.androidide.logsender.LogSenderService"
+104-->[com.itsaky.androidide:logsender:2.7.1-beta-f5231daa5-SNAPSHOT] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/7bf0237d538928fa47256630a8bef1f1/transformed/logsender-2.7.1-beta-f5231daa5-SNAPSHOT-debug/AndroidManifest.xml:39:13-76
+105            android:exported="false"
+105-->[com.itsaky.androidide:logsender:2.7.1-beta-f5231daa5-SNAPSHOT] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/7bf0237d538928fa47256630a8bef1f1/transformed/logsender-2.7.1-beta-f5231daa5-SNAPSHOT-debug/AndroidManifest.xml:40:13-37
+106            android:foregroundServiceType="dataSync" />
+106-->[com.itsaky.androidide:logsender:2.7.1-beta-f5231daa5-SNAPSHOT] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/7bf0237d538928fa47256630a8bef1f1/transformed/logsender-2.7.1-beta-f5231daa5-SNAPSHOT-debug/AndroidManifest.xml:41:13-53
+107
+108        <provider
+108-->[androidx.emoji2:emoji2:1.2.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a0aeda5a20292ec44a38b1146c336646/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+109            android:name="androidx.startup.InitializationProvider"
+109-->[androidx.emoji2:emoji2:1.2.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a0aeda5a20292ec44a38b1146c336646/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
+110            android:authorities="com.ryomen.bikee.androidx-startup"
+110-->[androidx.emoji2:emoji2:1.2.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a0aeda5a20292ec44a38b1146c336646/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
+111            android:exported="false" >
+111-->[androidx.emoji2:emoji2:1.2.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a0aeda5a20292ec44a38b1146c336646/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
+112            <meta-data
+112-->[androidx.emoji2:emoji2:1.2.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a0aeda5a20292ec44a38b1146c336646/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+113                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+113-->[androidx.emoji2:emoji2:1.2.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a0aeda5a20292ec44a38b1146c336646/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
+114                android:value="androidx.startup" />
+114-->[androidx.emoji2:emoji2:1.2.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a0aeda5a20292ec44a38b1146c336646/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
 115            <meta-data
-115-->[androidx.emoji2:emoji2:1.2.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a0aeda5a20292ec44a38b1146c336646/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
-116                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-116-->[androidx.emoji2:emoji2:1.2.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a0aeda5a20292ec44a38b1146c336646/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
+115-->[androidx.lifecycle:lifecycle-process:2.4.1] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/25c6eab0309ab4ba427cf95210ba2d0d/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
+116                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+116-->[androidx.lifecycle:lifecycle-process:2.4.1] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/25c6eab0309ab4ba427cf95210ba2d0d/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
 117                android:value="androidx.startup" />
-117-->[androidx.emoji2:emoji2:1.2.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a0aeda5a20292ec44a38b1146c336646/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
-118            <meta-data
-118-->[androidx.lifecycle:lifecycle-process:2.4.1] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/25c6eab0309ab4ba427cf95210ba2d0d/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
-119                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-119-->[androidx.lifecycle:lifecycle-process:2.4.1] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/25c6eab0309ab4ba427cf95210ba2d0d/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
-120                android:value="androidx.startup" />
-120-->[androidx.lifecycle:lifecycle-process:2.4.1] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/25c6eab0309ab4ba427cf95210ba2d0d/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
-121        </provider>
-122    </application>
-123
-124</manifest>
+117-->[androidx.lifecycle:lifecycle-process:2.4.1] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/25c6eab0309ab4ba427cf95210ba2d0d/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
+118        </provider>
+119    </application>
+120
+121</manifest>
