@@ -36,12 +36,6 @@
             </intent-filter>
 
             <!-- 🔗 Assistant trigger (e.g. bikee://start_bike) -->
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-                <data android:scheme="bikee" />
-            </intent-filter>
         </activity>
 
         <!-- 🎯 Broadcast-only receiver -->
