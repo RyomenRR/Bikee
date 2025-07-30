@@ -3910,10 +3910,12 @@ int string select_device 0x7f1000af
 int string select_language 0x7f1000b0
 int string shortcut_long_label 0x7f1000b1
 int string shortcut_short_label 0x7f1000b2
-int string side_sheet_accessibility_pane_title 0x7f1000b3
-int string side_sheet_behavior 0x7f1000b4
-int string start_engine 0x7f1000b5
-int string status_bar_notification_info_overflow 0x7f1000b6
+int string shortcut_start_bike_long 0x7f1000b3
+int string shortcut_start_bike_short 0x7f1000b4
+int string side_sheet_accessibility_pane_title 0x7f1000b5
+int string side_sheet_behavior 0x7f1000b6
+int string start_engine 0x7f1000b7
+int string status_bar_notification_info_overflow 0x7f1000b8
 int style AlertDialog_AppCompat 0x7f110000
 int style AlertDialog_AppCompat_Light 0x7f110001
 int style Animation_AppCompat_Dialog 0x7f110002
@@ -7074,3 +7076,4 @@ int styleable include_constraintSet 0
 int xml actions 0x7f130000
 int xml backup_rules 0x7f130001
 int xml data_extraction_rules 0x7f130002
+int xml shortcuts 0x7f130003

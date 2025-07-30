@@ -71,6 +71,8 @@ string select_device
 string select_language
 string shortcut_long_label
 string shortcut_short_label
+string shortcut_start_bike_long
+string shortcut_start_bike_short
 string start_engine
 style AppTheme
 style Base.AppTheme
@@ -80,3 +82,4 @@ style Theme.Bikee.ShortcutNoUI
 xml actions
 xml backup_rules
 xml data_extraction_rules
+xml shortcuts

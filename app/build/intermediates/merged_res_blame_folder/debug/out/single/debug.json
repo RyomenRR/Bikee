@@ -16,6 +16,10 @@
         "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.1.1/com.ryomen.bikee.app-main-31:/drawable/btn_gradient_orange.xml"
     },
     {
+        "merged": "com.ryomen.bikee.app-merged_res-29:/xml_shortcuts.xml.flat",
+        "source": "com.ryomen.bikee.app-main-31:/xml/shortcuts.xml"
+    },
+    {
         "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.1.1/com.ryomen.bikee.app-merged_res-29:/drawable_bg_button_add.xml.flat",
         "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.1.1/com.ryomen.bikee.app-main-31:/drawable/bg_button_add.xml"
     },

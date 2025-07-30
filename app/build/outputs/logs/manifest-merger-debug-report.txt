@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:2:1-66:12
-INJECTED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:2:1-66:12
-INJECTED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:2:1-66:12
-INJECTED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:2:1-66:12
+ADDED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:2:1-60:12
+INJECTED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:2:1-60:12
+INJECTED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:2:1-60:12
+INJECTED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:2:1-60:12
 MERGED from [androidx.databinding:viewbinding:8.0.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/82fa8324d90f33c722038b7dee9bbab9/transformed/viewbinding-8.0.0/AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.material:material:1.9.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/3450b8368fdad24119205bb0b53afdde/transformed/material-1.9.0/AndroidManifest.xml:17:1-26:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dca3f209149da945fc6fb16ed46dc543/transformed/constraintlayout-2.1.4/AndroidManifest.xml:2:1-11:12
@@ -46,20 +46,20 @@ MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /data/d
 MERGED from [androidx.print:print:1.0.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/377f4ed099c2beefca04dbc6f1f47ebc/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/0d37c9e51443fde31345f10bc8c2354d/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.3.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/40e29b14a2b2fe0c125ccecd737cf4b7/transformed/annotation-experimental-1.3.0/AndroidManifest.xml:17:1-22:12
-INJECTED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:2:1-66:12
-INJECTED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:2:1-66:12
-INJECTED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:2:1-66:12
+INJECTED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:2:1-60:12
+INJECTED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:2:1-60:12
+INJECTED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:2:1-60:12
 	package
 		ADDED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:3:5-31
 		INJECTED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml
 		INJECTED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml
-		ADDED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:2:1-66:12
+		ADDED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:2:1-60:12
 		INJECTED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml
-		ADDED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:2:1-66:12
+		ADDED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:2:1-60:12
 		INJECTED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:2:11-69
@@ -98,7 +98,7 @@ MERGED from [com.itsaky.androidide:logsender:2.7.1-beta-f5231daa5-SNAPSHOT] /dat
 	android:name
 		ADDED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:16:22-64
 application
-ADDED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:18:5-65:19
+ADDED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:18:5-59:19
 MERGED from [com.google.android.material:material:1.9.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/3450b8368fdad24119205bb0b53afdde/transformed/material-1.9.0/AndroidManifest.xml:24:5-20
 MERGED from [com.google.android.material:material:1.9.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/3450b8368fdad24119205bb0b53afdde/transformed/material-1.9.0/AndroidManifest.xml:24:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dca3f209149da945fc6fb16ed46dc543/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
@@ -130,7 +130,7 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] /data/data/com.itsaky.andro
 	android:theme
 		ADDED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:24:9-43
 activity#com.ryomen.bikee.MainActivity
-ADDED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:27:9-45:20
+ADDED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:27:9-39:20
 	android:launchMode
 		ADDED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:29:13-43
 	android:exported
@@ -147,48 +147,30 @@ category#android.intent.category.LAUNCHER
 ADDED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:35:17-77
 	android:name
 		ADDED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:35:27-74
-intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:scheme:bikee
-ADDED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:39:13-44:29
-action#android.intent.action.VIEW
-ADDED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:40:17-69
-	android:name
-		ADDED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:40:25-66
-category#android.intent.category.DEFAULT
-ADDED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:41:17-76
-	android:name
-		ADDED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:41:27-73
-category#android.intent.category.BROWSABLE
-ADDED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:42:17-78
-	android:name
-		ADDED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:42:27-75
-data
-ADDED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:43:17-48
-	android:scheme
-		ADDED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:43:23-45
 receiver#com.ryomen.bikee.StartBikeReceiver
-ADDED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:48:9-52:20
+ADDED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:42:9-46:20
 	android:exported
-		ADDED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:48:53-76
+		ADDED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:42:53-76
 	android:name
-		ADDED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:48:19-52
+		ADDED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:42:19-52
 intent-filter#action:name:com.ryomen.bikee.START_BIKE
-ADDED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:49:13-51:29
+ADDED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:43:13-45:29
 action#com.ryomen.bikee.START_BIKE
-ADDED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:50:17-70
+ADDED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:44:17-70
 	android:name
-		ADDED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:50:25-67
+		ADDED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:44:25-67
 service#com.ryomen.bikee.BluetoothService
-ADDED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:55:9-78
+ADDED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:49:9-78
 	android:exported
-		ADDED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:55:51-75
+		ADDED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:49:51-75
 	android:name
-		ADDED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:55:18-50
+		ADDED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:49:18-50
 activity#com.ryomen.bikee.CommandEditActivity
-ADDED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:58:9-60:39
+ADDED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:52:9-54:39
 	android:exported
-		ADDED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:60:13-36
+		ADDED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:54:13-36
 	android:name
-		ADDED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:59:13-48
+		ADDED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml:53:13-48
 uses-sdk
 INJECTED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /storage/emulated/0/AndroidIDEProjects/Bikee/app/src/main/AndroidManifest.xml

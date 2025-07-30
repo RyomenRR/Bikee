@@ -3911,6 +3911,8 @@ string select_device
 string select_language
 string shortcut_long_label
 string shortcut_short_label
+string shortcut_start_bike_long
+string shortcut_start_bike_short
 string side_sheet_accessibility_pane_title
 string side_sheet_behavior
 string start_engine
@@ -5177,3 +5179,4 @@ styleable include constraintSet
 xml actions
 xml backup_rules
 xml data_extraction_rules
+xml shortcuts

@@ -2,14 +2,13 @@
     <shortcut
         android:shortcutId="start_bike"
         android:enabled="true"
-        android:shortcutShortLabel="@string/shortcut_short_label"
-        android:shortcutLongLabel="@string/shortcut_long_label"
-        android:icon="@drawable/ic_bike">
+        android:icon="@drawable/ic_bike"
+        android:shortcutShortLabel="@string/shortcut_start_bike_short"
+        android:shortcutLongLabel="@string/shortcut_start_bike_long">
 
         <intent
-    android:action="android.intent.action.VIEW"
-    android:targetPackage="com.ryomen.bikee"
-    android:targetClass="com.ryomen.bikee.StartBikeActivity"
-    android:data="bikee://start" />
+            android:action="com.ryomen.bikee.START_BIKE"
+            android:targetPackage="com.ryomen.bikee"
+            android:targetClass="com.ryomen.bikee.StartBikeReceiver" />
     </shortcut>
 </shortcuts>
