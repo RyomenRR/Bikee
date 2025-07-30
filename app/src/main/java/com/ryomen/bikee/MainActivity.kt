@@ -1,6 +1,9 @@
 package com.ryomen.bikee
 
 // Importing necessary Android, Bluetooth, JSON, UI, and utility classes
+import android.content.pm.ShortcutInfo
+import android.content.pm.ShortcutManager
+import android.graphics.drawable.Icon
 import android.app.AlertDialog
 import android.bluetooth.*
 import android.content.*
@@ -82,7 +85,23 @@ ShortcutManagerCompat.pushDynamicShortcut(this, shortcut)
         // Buttons from layout
         val btnStart = findViewById<Button>(R.id.btnStart)
         val btnFx = findViewById<Button>(R.id.btnFx)
+        // new thing 
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N_MR1) {
+    val shortcutManager = getSystemService(ShortcutManager::class.java)
 
+    val intent = Intent("com.bikee.START_BIKE").apply {
+        setClass(this@MainActivity, StartBikeReceiver::class.java)
+    }
+
+    val shortcut = ShortcutInfo.Builder(this, "start_bike")
+        .setShortLabel("Start Bike")
+        .setLongLabel("Start your bike silently")
+        .setIcon(Icon.createWithResource(this, R.drawable.ic_bike))
+        .setIntent(intent) // ← this will now trigger BroadcastReceiver
+        .build()
+
+    shortcutManager.dynamicShortcuts = listOf(shortcut)
+}
         // ✅ Handle if shortcut URI triggers this activity
         intent?.data?.let { uri ->
             if (uri.toString() == "bikee://start_bike") {

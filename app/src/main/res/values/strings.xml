@@ -21,6 +21,6 @@
     <string name="hindi">Hindi</string>
     <string name="gujarati">Gujarati</string>
     <string name="shortcut_short_label">Start Bike</string>
-    <string name="shortcut_long_label">Start your bike with Google Assistant</string> 
+<string name="shortcut_long_label">Start your bike silently</string>
     <string name="change_language">Change Language</string>
 </resources>

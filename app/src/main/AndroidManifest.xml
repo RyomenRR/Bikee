@@ -23,7 +23,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Bikee">
 
-        <!-- 🏍️ Main Activity (Handles launcher, shortcut & assistant trigger) -->
+        <!-- 🏍️ Main Activity -->
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
@@ -35,7 +35,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
-            <!-- 🔗 Shortcut or Assistant trigger (bikee://start_bike) -->
+            <!-- 🔗 Assistant trigger (e.g. bikee://start_bike) -->
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -44,27 +44,23 @@
             </intent-filter>
         </activity>
 
-        <!-- 🎯 Receiver for pinned shortcut broadcast -->
+        <!-- 🎯 Broadcast-only receiver -->
         <receiver android:name=".StartBikeReceiver" android:exported="true">
             <intent-filter>
                 <action android:name="com.ryomen.bikee.START_BIKE" />
             </intent-filter>
         </receiver>
-    <service android:name=".BluetoothService" android:exported="false" />
-        <!-- 🛠 Voice Command Editor -->
+
+        <!-- 🔌 Bluetooth logic -->
+        <service android:name=".BluetoothService" android:exported="false" />
+
+        <!-- 🧠 Command editor -->
         <activity
             android:name=".CommandEditActivity"
             android:exported="true" />
 
-        <!-- 🧠 Invisible Shortcut Handler -->
-        <activity
-            android:name=".StartBikeActivity"
-            android:exported="true"
-            android:theme="@style/Theme.Bikee.ShortcutNoUI" />
+        <!-- ⛔ Removed shortcut meta-data to prevent launching Activity -->
+        <!-- 🚫 <meta-data android:name="android.app.shortcuts" android:resource="@xml/shortcuts" /> -->
 
-        <!-- 🚀 Shortcut XML config (for Android launcher) -->
-        <meta-data
-            android:name="android.app.shortcuts"
-            android:resource="@xml/shortcuts" />
     </application>
 </manifest>
