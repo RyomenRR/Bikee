@@ -16,6 +16,10 @@
         "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.1.1/com.ryomen.bikee.app-main-31:/drawable/btn_gradient_orange.xml"
     },
     {
+        "merged": "com.ryomen.bikee.app-merged_res-29:/xml_shortcuts.xml.flat",
+        "source": "com.ryomen.bikee.app-main-31:/xml/shortcuts.xml"
+    },
+    {
         "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.1.1/com.ryomen.bikee.app-merged_res-29:/drawable_bg_button_add.xml.flat",
         "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.1.1/com.ryomen.bikee.app-main-31:/drawable/bg_button_add.xml"
     },
@@ -84,6 +88,10 @@
         "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.1.1/com.ryomen.bikee.app-main-31:/drawable/ic_launcher_background.xml"
     },
     {
+        "merged": "com.ryomen.bikee.app-merged_res-29:/xml_entity_sets.xml.flat",
+        "source": "com.ryomen.bikee.app-main-31:/xml/entity_sets.xml"
+    },
+    {
         "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.1.1/com.ryomen.bikee.app-merged_res-29:/mipmap-anydpi-v26_ic_launcher.xml.flat",
         "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.1.1/com.ryomen.bikee.app-main-31:/mipmap-anydpi-v26/ic_launcher.xml"
     },
@@ -94,6 +102,10 @@
     {
         "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.1.1/com.ryomen.bikee.app-merged_res-29:/drawable-v24_ic_launcher_foreground.xml.flat",
         "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.1.1/com.ryomen.bikee.app-main-31:/drawable-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.1.1/com.ryomen.bikee.app-merged_res-29:/xml_actions.xml.flat",
+        "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.1.1/com.ryomen.bikee.app-main-31:/xml/actions.xml"
     },
     {
         "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.1.1/com.ryomen.bikee.app-merged_res-29:/mipmap-xxxhdpi_ic_launcher_monochrome.png.flat",
@@ -108,8 +120,8 @@
         "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.1.1/com.ryomen.bikee.app-main-31:/drawable/btn_gradient_blue.xml"
     },
     {
-        "merged": "com.ryomen.bikee.app-merged_res-29:/layout_activity_main.xml.flat",
-        "source": "com.ryomen.bikee.app-main-31:/layout/activity_main.xml"
+        "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.1.1/com.ryomen.bikee.app-merged_res-29:/xml_shortcuts.xml.flat",
+        "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.1.1/com.ryomen.bikee.app-main-31:/xml/shortcuts.xml"
     },
     {
         "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.1.1/com.ryomen.bikee.app-merged_res-29:/drawable_bg_gradient.xml.flat",

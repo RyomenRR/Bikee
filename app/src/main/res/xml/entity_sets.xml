@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entity-set
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:entitySetId="bike">
+    <entity android:name="@string/my_bike_name" android:identifier="my_bike_id"/>
+    </entity-set>
+    

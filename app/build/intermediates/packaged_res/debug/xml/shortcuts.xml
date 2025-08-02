@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <capability android:name="actions.intent.START_BIKE">
+        <intent android:action="android.intent.action.VIEW">
+            <data android:scheme="bikee" android:host="start"/>
+        </intent>
+        <parameter
+            android:name="bike.name"
+            android:key="bikeId">
+            <shortcut-ids android:shortcutIds="@array/bike_shortcut_ids"/>
+        </parameter>
+    </capability>
+
+    <shortcut
+        android:shortcutId="start_bike"
+        android:enabled="true"
+        android:icon="@drawable/ic_bike"
+        android:shortcutShortLabel="@string/shortcut_start_bike_short"
+        android:shortcutLongLabel="@string/shortcut_start_bike_long">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="bikee://start" />
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+</shortcuts>

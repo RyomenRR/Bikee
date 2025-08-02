@@ -23,6 +23,9 @@ public final class ActivityMainBinding implements ViewBinding {
   private final DrawerLayout rootView;
 
   @NonNull
+  public final Button addShortcutButton;
+
+  @NonNull
   public final Button btnFx;
 
   @NonNull
@@ -58,12 +61,13 @@ public final class ActivityMainBinding implements ViewBinding {
   @NonNull
   public final Toolbar toolbar;
 
-  private ActivityMainBinding(@NonNull DrawerLayout rootView, @NonNull Button btnFx,
-      @NonNull Button btnFx1, @NonNull Button btnFx2, @NonNull Button btnFx3,
+  private ActivityMainBinding(@NonNull DrawerLayout rootView, @NonNull Button addShortcutButton,
+      @NonNull Button btnFx, @NonNull Button btnFx1, @NonNull Button btnFx2, @NonNull Button btnFx3,
       @NonNull Button btnFxOff, @NonNull Button btnStart, @NonNull DrawerLayout drawerLayout,
       @NonNull LinearLayout fxContainer, @NonNull LinearLayout fxOptions,
       @NonNull NavigationView navView, @NonNull Button toggleIgnition, @NonNull Toolbar toolbar) {
     this.rootView = rootView;
+    this.addShortcutButton = addShortcutButton;
     this.btnFx = btnFx;
     this.btnFx1 = btnFx1;
     this.btnFx2 = btnFx2;
@@ -105,6 +109,12 @@ public final class ActivityMainBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.addShortcutButton;
+      Button addShortcutButton = ViewBindings.findChildViewById(rootView, id);
+      if (addShortcutButton == null) {
+        break missingId;
+      }
+
       id = R.id.btnFx;
       Button btnFx = ViewBindings.findChildViewById(rootView, id);
       if (btnFx == null) {
@@ -173,9 +183,9 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityMainBinding((DrawerLayout) rootView, btnFx, btnFx1, btnFx2, btnFx3,
-          btnFxOff, btnStart, drawerLayout, fxContainer, fxOptions, navView, toggleIgnition,
-          toolbar);
+      return new ActivityMainBinding((DrawerLayout) rootView, addShortcutButton, btnFx, btnFx1,
+          btnFx2, btnFx3, btnFxOff, btnStart, drawerLayout, fxContainer, fxOptions, navView,
+          toggleIgnition, toolbar);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -1,43 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest 
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ryomen.bikee">
 
-    <!-- Basic Bluetooth permissions -->
-    <uses-permission android:name="android.permission.BLUETOOTH"/>
-    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <!-- 📡 Bluetooth & Location permissions -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
-    <!-- Android 12+ Bluetooth permissions -->
-    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" android:required="false"/>
-    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" android:required="false"/>
+    <!-- 📱 Android 12+ Bluetooth permissions -->
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" android:required="false" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" android:required="false" />
 
-    <!-- Voice recognition and audio input -->
+    <!-- 🎤 Voice & Internet -->
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.INTERNET" />
 
-    <application 
-        android:allowBackup="true" 
-        android:icon="@mipmap/ic_launcher" 
-        android:roundIcon="@mipmap/ic_launcher" 
-        android:label="@string/app_name" 
-        android:supportsRtl="true" 
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
         android:theme="@style/Theme.Bikee">
 
-        <!-- Main launcher activity -->
+        <!-- 🏍️ Main Activity -->
         <activity
             android:name=".MainActivity"
+            android:launchMode="singleTop"
             android:exported="true">
+
+            <!-- 📱 Launcher icon -->
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+            <!-- 🔗 Assistant trigger (e.g. bikee://start_bike) -->
         </activity>
 
-        <!-- Voice command editing activity -->
+        <!-- 🎯 Broadcast-only receiver -->
+        <receiver android:name=".StartBikeReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="com.ryomen.bikee.START_BIKE" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 🔌 Bluetooth logic -->
+        <service android:name=".BluetoothService" android:exported="false" />
+
+        <!-- 🧠 Command editor -->
         <activity
             android:name=".CommandEditActivity"
             android:exported="true" />
-            
+
+        <!-- ⛔ Removed shortcut meta-data to prevent launching Activity -->
+        <meta-data
+    android:name="android.app.shortcuts"
+    android:resource="@xml/actions" />
+    
+        <!-- 🚫 <meta-data android:name="android.app.shortcuts" android:resource="@xml/shortcuts" /> -->
+
     </application>
 </manifest>
