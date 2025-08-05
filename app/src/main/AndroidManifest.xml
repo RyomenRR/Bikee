@@ -1,46 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ryomen.bikee">
 
-<manifest 
-    xmlns:android="http://schemas.android.com/apk/res/android">
-        <!-- Basic Bluetooth permissions -->
-    <uses-permission android:name="android.permission.BLUETOOTH"/>
-    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
-    <uses-permission android:name="android.permission.BLUETOOTH_SCAN"/>
+    <!-- Bluetooth permissions -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
     <uses-permission android:name="android.permission.BLUETOOTH_CONNECT"
-    android:usesPermissionFlags="neverForLocation"/>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+        android:usesPermissionFlags="neverForLocation" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
-    <!-- Voice recognition and audio input -->
+    <!-- Voice & internet -->
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.INTERNET" />
-       
-    <application 
-        android:allowBackup="true" 
-        android:icon="@mipmap/ic_launcher" 
-        android:roundIcon="@mipmap/ic_launcher" 
-        android:label="@string/app_name" 
-        android:supportsRtl="true" 
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
         android:theme="@style/Theme.Bikee">
-        
-        <activity 
-            android:name="MainActivity" 
+
+        <!-- Main Launcher Activity -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <!-- Static shortcut declaration -->
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts" />
+        </activity>
+
+        <!-- Activity triggered by voice shortcut -->
+        <activity
+            android:name=".VoiceShortcutActivity"
+            android:exported="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- Widget Receiver -->
+        <receiver
+            android:name=".StartBikeWidget"
             android:exported="true">
             <intent-filter>
-                <action 
-                    android:name="android.intent.action.MAIN" />
-                <category 
-                    android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
-        </activity>
-        <receiver android:name=".StartBikeWidget" android:exported="true">
-    <intent-filter>
-        <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-    </intent-filter>
-    <meta-data
-        android:name="android.appwidget.provider"
-        android:resource="@xml/start_bike_widget_info" />
-</receiver>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/start_bike_widget_info" />
+        </receiver>
 
-<receiver android:name=".StartBikeReceiver" android:exported="true"/>
+        <!-- Broadcast Receiver triggered by widget or other intents -->
+        <receiver
+            android:name=".StartBikeReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.ryomen.bikee.START_BIKE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+                <service android:name=".BluetoothService"
+        android:exported="false" />
     </application>
 </manifest>

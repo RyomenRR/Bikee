@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:shortcutId="start_bike"
+        android:enabled="true"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:shortcutShortLabel="@string/shortcut_short"
+        android:shortcutLongLabel="@string/shortcut_long"
+        android:shortcutDisabledMessage="@string/shortcut_disabled">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.ryomen.bikee.VoiceShortcutActivity"
+            android:targetPackage="com.ryomen.bikee" />
+    </shortcut>
+</shortcuts>
