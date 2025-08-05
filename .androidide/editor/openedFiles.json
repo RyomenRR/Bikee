@@ -1,0 +1,20 @@
+{
+  "allFiles": [
+    {
+      "file": "/storage/emulated/0/slo/Bikee/app/src/main/java/com/ryomen/bikee/MainActivity.kt",
+      "selection": {
+        "end": {
+          "column": 0,
+          "index": 1017,
+          "line": 30
+        },
+        "start": {
+          "column": 0,
+          "index": 1017,
+          "line": 30
+        }
+      }
+    }
+  ],
+  "selectedFile": "/storage/emulated/0/slo/Bikee/app/src/main/java/com/ryomen/bikee/MainActivity.kt"
+}
